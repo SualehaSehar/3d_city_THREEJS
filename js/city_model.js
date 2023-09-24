@@ -1,17 +1,14 @@
-
 import { Car } from "/js/car.js";
 import { Trees } from "/js/trees.js";
 import { Roads } from "/js/addRoads.js";
 import { Buildings } from "/js/buildings.js";
 import { Lights } from "/js/addLights.js";
 import { Skybox } from "/js/skybox.js";
-import { Factory } from '/js/factory.js';
-
+import { Factory } from "/js/factory.js";
 
 // Create your scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xffffff);
-
 
 var factory = new Factory(200, 60, -400, 400);
 
@@ -19,7 +16,6 @@ initialize();
 animate();
 
 function initialize() {
-
   var skBox = new Skybox();
   skBox.addSkBox(scene);
 
@@ -50,7 +46,6 @@ function initialize() {
     scene.add(car1);
     const car2 = car.createCar(-220);
     scene.add(car2);
-
 
     var tree = new Trees();
     tree.trees(scene);
@@ -105,7 +100,6 @@ function initialize() {
       }
     }
 
-
     const animate1 = (t) => {
       car1.position.x = +t / 300;
       car2.position.x = +t / 300;
@@ -125,7 +119,6 @@ function initialize() {
     g = 0;
   }
 }
-
 
 function animate() {
   window.requestAnimationFrame(animate.bind(this));
